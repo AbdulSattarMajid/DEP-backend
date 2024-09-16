@@ -1,0 +1,33 @@
+GET http://localhost:3000/
+### Create a new user
+POST http://localhost:3000/create
+Content-Type: application/json
+
+{
+    "user": {
+        "name": "ali",
+        "id": 13
+    },
+    "products": [
+        {
+            "name": "Tablet",
+            "price": 300
+        },
+        {
+            "name": "Keyboard",
+            "price": 50
+        }
+    ]
+}
+
+###
+PATCH http://localhost:3000/update/13
+Content-Type: application/json
+
+{
+    "user.name": "Updated Name",
+    "products": [
+        { "name": "Updated Product 1", "price": 150 },
+        { "name": "Updated Product 2", "price": 250 }
+    ]
+}
